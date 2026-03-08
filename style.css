@@ -1,0 +1,514 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background-color: #f3efe4;
+
+}
+
+/* =======================
+   HERO SLIDER
+======================= */
+
+.hero-slider {
+    position: relative;
+    width: 100%;
+    height: 90vh;
+    overflow: hidden;
+  }
+  
+  .slides {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+  /* Each Slide */
+  .slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+  }
+  
+  /* Active Slide */
+  .slide.active {
+    opacity: 1;
+    z-index: 1;
+  }
+  
+  /* Slide Image */
+  .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  
+  /* =======================
+     WHITE TRANSPARENT OVERLAY
+  ======================= */
+  
+  .slide::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(201, 201, 201, 0.55); /* Adjust opacity here */
+    z-index: 1;
+  }
+  
+  /* =======================
+     TEXT STYLING
+  ======================= */
+  
+  .slide-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #411b1b; /* Dark text for white overlay */
+    text-align: center;
+    z-index: 2; /* Above overlay */
+    width: 80%;
+  }
+  
+  .slide-text h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    animation: introUp 1.2s ease-out forwards;
+  }
+  
+  /* =======================
+     TEXT ANIMATION
+  ======================= */
+  
+  @keyframes introUp {
+    0% {
+      transform: translateY(50px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+/* NAVBAR */
+.navbar {
+    background-color: #0f4c2c;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 80px;      /* remove vertical padding */
+    height: 80px;         /* fix navbar height */
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+
+.logo img {
+        height: 130px;   /* control height instead of width */
+        width: auto;
+    }
+
+
+.logo h2 {
+    color: #fdd79d;
+    font-weight: 1000;
+}
+
+.logo p {
+    font-size: 20px;
+    color: #fffdfd;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 50px;
+}
+
+nav a {
+    text-decoration: none;
+    color:#fffdfd;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+/* HERO */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px;
+    background-color: #e7dfb1;
+}
+
+/* LEFT SIDE */
+.hero-left {
+    max-width: 600px;
+}
+
+.badge {
+    background-color: #f3b8b8;
+    padding: 12px 25px;
+    display: inline-block;
+    border-radius: 40px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+h1 {
+    font-size: 64px;
+    line-height: 1.1;
+    font-weight: 800;
+}
+
+.dark {
+    color: #0b1742;
+}
+
+.orange {
+    color: #f05a00;
+}
+
+.green {
+    color: #0f6b1f;
+}
+
+.subtitle {
+    font-size: 20px;
+    margin: 25px 0;
+    color: #333;
+}
+
+.buttons {
+    display: flex;
+    gap: 25px;
+}
+
+.btn-primary {
+    background-color: #ff6a13;
+    color: white;
+    border: none;
+    padding: 16px 30px;
+    border-radius: 40px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #e55a05;
+}
+
+.btn-outline {
+    background-color: transparent;
+    border: 2px solid #0f6b1f;
+    color: #0f6b1f;
+    padding: 14px 28px;
+    border-radius: 40px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.btn-outline:hover {
+    background-color: #0f6b1f;
+    color: white;
+}
+
+/* RIGHT SIDE */
+/* Hero Right Section */
+.hero-right {
+    position: relative;
+    width: 450px;
+  }
+  
+  /* Main Image Container */
+  .image-container {
+    position: relative;
+    border-radius: 20px;
+    overflow: visible;
+  }
+  
+  /* Main Image */
+  .main-img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+  }
+  
+  /* Floating Small Images */
+  .floating-img {
+    position: absolute;
+    width: 200px;
+    background: rgb(230, 225, 225);
+    padding: 6px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    transform:  rotate(-5deg);
+  }
+  
+  .floating-img img {
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transform:  rotate(-5deg);
+  }
+  
+  /* Top Left Image */
+  .top-img {
+    top: -30px;
+    left: -30px;
+  }
+  
+  /* Bottom Right Image */
+  .bottom-img {
+    bottom: -30px;
+    right: -30px;
+  }
+  
+ /* ===============================
+   Floating Green Tilted Badge
+================================= */
+
+.floating-badge {
+    position: absolute;
+    right: -20px;
+    top: 10%;
+    
+    /* Center vertically + tilt */
+    transform: translateY(-50%) rotate(-15deg);
+  
+    background: #2e7d32;
+    color: #ffffff;
+  
+    padding: 18px 24px;
+    border-radius: 18px;
+  
+    font-weight: 700;
+    font-size: 1.2rem;
+    line-height: 1.3;
+  
+    text-align: center;
+  
+    /* Premium shadow */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+  
+    /* Smooth animation */
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+  }
+  
+  /* Smaller text */
+  .floating-badge span {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-top: 4px;
+    opacity: 0.95;
+  }
+  
+  /* ===============================
+     Premium Hover Effect
+  ================================= */
+  
+  .floating-badge:hover {
+    transform: translateY(-50%) rotate(0deg);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.35);
+  }
+/* RESPONSIVE */
+@media(max-width: 1000px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-right {
+        margin-top: 40px;
+    }
+
+    .buttons {
+        justify-content: center;
+    }
+}
+
+
+/*Event Section */
+/* SECTION */
+
+.events-section{
+text-align:center;
+padding:60px 20px;
+}
+
+.title{
+font-size:48px;
+color:#2e3f2f;
+margin-bottom:10px;
+}
+
+.subtitle{
+max-width:700px;
+margin:auto;
+color:#6c756c;
+font-size:16px;
+margin-bottom:40px;
+}
+
+/* CONTAINER */
+
+.events-container{
+background:#e8dfcf;
+max-width:900px;
+margin:auto;
+padding:30px;
+border-radius:18px;
+}
+
+/* CARD */
+
+.event-card{
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:25px 10px;
+border-bottom:1px solid #d3c9b7;
+}
+
+.event-card:last-child{
+border-bottom:none;
+}
+
+/* DATE */
+
+.event-date{
+width:120px;
+text-align:left;
+}
+
+.event-date h3{
+color:#d55a2a;
+margin:0;
+font-size:20px;
+}
+
+.event-date span{
+font-size:14px;
+color:#6d6d6d;
+}
+
+/* INFO */
+
+.event-info{
+flex:1;
+text-align:left;
+padding:0 20px;
+}
+
+.event-info h2{
+margin:0;
+color:#2f3b2f;
+font-size:20px;
+}
+
+.event-info p{
+margin-top:6px;
+color:#6a6a6a;
+font-size:14px;
+line-height:1.5;
+}
+
+/* BUTTON */
+
+.register-btn{
+background:#d8562b;
+color:white;
+border:none;
+padding:12px 26px;
+border-radius:22px;
+font-size:14px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.register-btn:hover{
+background:#b9441d;
+}
+/* Footer section */ 
+
+.footer {
+    background: #0f4c2c;
+    color: white;
+    padding: 50px 20px 20px;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .footer-logo img {
+    width: 60px;
+  }
+  .footer-logo {
+    width: 50px;
+    height: 50px;
+    background: orange;
+    color: white;
+    font-weight: bold;
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+  
+  .footer-brand h2 {
+    margin: 5px 0;
+  }
+  
+  .footer-social .social-icons a {
+    color: white;
+    font-size: 20px;
+    margin-right: 15px;
+    transition: 0.3s;
+  }
+  
+  .footer-social .social-icons a:hover {
+    color: orange;
+    transform: scale(1.2);
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    border-top: 1px solid rgba(255,255,255,0.2);
+    padding-top: 15px;
+    font-size: 14px;
+  }

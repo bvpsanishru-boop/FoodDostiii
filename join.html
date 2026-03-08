@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Join Food Dosti</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body{
+            background:#f8f8f8;
+        }
+
+        /* HERO SECTION */
+        .join-hero{
+            height:85vh;
+            background:linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+            url("images/") center/cover no-repeat;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            text-align:center;
+            color:white;
+            padding:20px;
+        }
+
+        .join-hero h1{
+            font-size:60px;
+            font-weight:bold;
+        }
+
+        .join-hero p{
+            font-size:20px;
+            margin-top:20px;
+        }
+
+        .join-hero button{
+            margin-top:30px;
+            padding:14px 30px;
+            border:none;
+            background:#16a34a;
+            color:white;
+            font-size:18px;
+            border-radius:8px;
+            cursor:pointer;
+        }
+
+        /* ROLE SECTION */
+        .roles{
+            padding:70px 10%;
+            background:white;
+            text-align:center;
+        }
+
+        .roles h2{
+            font-size:36px;
+            margin-bottom:40px;
+        }
+
+        .role-container{
+            display:flex;
+            gap:30px;
+            flex-wrap:wrap;
+            justify-content:center;
+        }
+
+        .role-card{
+            background:#f3f3f3;
+            padding:30px;
+            border-radius:12px;
+            width:300px;
+            transition:0.3s;
+        }
+
+        .role-card:hover{
+            background:#16a34a;
+            color:white;
+            transform:translateY(-8px);
+        }
+
+        .role-card i{
+            font-size:40px;
+            margin-bottom:20px;
+        }
+
+        /* FORM SECTION */
+        .join-form-section{
+            padding:80px 10%;
+            background:#f9fafb;
+        }
+
+        .join-form-section h2{
+            text-align:center;
+            font-size:36px;
+            margin-bottom:40px;
+        }
+
+        .join-form{
+            max-width:700px;
+            margin:auto;
+            background:white;
+            padding:40px;
+            border-radius:12px;
+            box-shadow:0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .join-form input,
+        .join-form select,
+        .join-form textarea{
+            width:100%;
+            padding:12px;
+            margin-bottom:20px;
+            border-radius:8px;
+            border:1px solid #ccc;
+        }
+
+        .join-form button{
+            width:100%;
+            padding:14px;
+            background:#16a34a;
+            color:white;
+            border:none;
+            border-radius:8px;
+            font-size:18px;
+            cursor:pointer;
+        }
+
+        /* IMPACT SECTION */
+        .impact{
+            padding:70px 10%;
+            text-align:center;
+            background:white;
+        }
+
+        .impact h2{
+            font-size:36px;
+            margin-bottom:40px;
+        }
+
+        .impact-stats{
+            display:flex;
+            justify-content:center;
+            gap:60px;
+            flex-wrap:wrap;
+        }
+
+        .stat{
+            font-size:28px;
+            font-weight:bold;
+            color:#16a34a;
+        }
+
+        .stat span{
+            display:block;
+            font-size:16px;
+            color:#555;
+            margin-top:10px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<!-- NAVBAR (UNCHANGED FROM YOUR CODE) -->
+<header class="navbar">
+    <div class="logo">
+        <img src="images/logo.png">
+        <div>
+            <h2>FOOD DOSTI</h2>
+            <p>Smart Food Rescue network</p>
+        </div>
+    </div>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="join.html">Join Now</a></li>
+            <li><a href="join.html" class="btn">Login</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+<!-- HERO SECTION -->
+<section class="join-hero">
+    <div>
+        <h1>Be A Food Dost</h1>
+        <p>Turn Surplus Food Into Smiles. Join The Food Dosti Movement Today.</p>
+        <button>Join Our Mission</button>
+    </div>
+</section>
+
+
+<!-- ROLE SELECTION -->
+<section class="roles">
+    <h2>How Would You Like To Join?</h2>
+
+    <div class="role-container">
+
+        <div class="role-card">
+            <i class="fas fa-hands-helping"></i>
+            <h3>Volunteer</h3>
+            <p>Collect food, distribute meals, and earn reward coins for every drive.</p>
+        </div>
+
+        <div class="role-card">
+            <i class="fas fa-utensils"></i>
+            <h3>Food Provider</h3>
+            <p>Donate surplus food and reduce waste while feeding the needy.</p>
+        </div>
+
+        <div class="role-card">
+            <i class="fas fa-hands-helping"></i>
+            <h3>NGO</h3>
+            <p>Connect with resources and support.</p>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- JOIN FORM -->
+<section class="join-form-section">
+    <h2>Register With Food Dosti</h2>
+
+    <div class="join-form">
+        <input type="text" placeholder="Full Name">
+        <input type="email" placeholder="Email Address">
+        <input type="text" placeholder="Phone Number">
+        
+        <select>
+            <option>Select Your Role</option>
+            <option>Volunteer</option>
+            <option>Restaurant</option>
+            <option>Resort</option>
+            <option>Event Management Company</option>
+        </select>
+
+        <textarea rows="4" placeholder="Your Address / Area"></textarea>
+
+        <button>Submit Registration</button>
+    </div>
+</section>
+
+
+<!-- IMPACT SECTION -->
+<section class="impact">
+    <h2>Your Contribution Creates Impact</h2>
+
+    <div class="impact-stats">
+        <div class="stat">
+            10,000+
+            <span>Active Volunteers</span>
+        </div>
+
+        <div class="stat">
+            2.5M+
+            <span>Meals Distributed</span>
+        </div>
+
+        <div class="stat">
+            5,000+
+            <span>Food Drives Conducted</span>
+        </div>
+    </div>
+</section>
+
+
+<!-- FOOTER (UNCHANGED FROM YOUR CODE) -->
+<footer class="footer">
+    <div class="footer-container">
+  
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <img src="images/logo.png" alt="Food Dosti Trust Logo">
+        </div>
+      
+        <h2>@Food Dosti Trust</h2>
+        <p>Rescue Food. Feed Lives.</p>
+      </div>
+  
+      <div class="footer-social">
+        <h3>Connect With Us</h3>
+        <div class="social-icons">
+          
+          <a href="mailto:support@fooddosti.org">
+            <i class="fas fa-envelope"></i>
+          </a>
+      
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-whatsapp"></i></a>
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+  
+        </div>
+      </div>
+      
+    </div>
+  
+    <div class="footer-bottom">
+      © 2026 Food Dosti Trust. All Rights Reserved.
+    </div>
+</footer>
+
+</body>
+</html>
